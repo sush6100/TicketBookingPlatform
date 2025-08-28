@@ -4,7 +4,7 @@ import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyx.platform.repository.TheatreRepo;
+import xyx.platform.repository.h2.TheatreRepo;
 import xyx.platform.resilience.Fallback;
 
 import java.util.List;

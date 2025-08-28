@@ -1,4 +1,4 @@
-package xyx.platform.domain.entity;
+package xyx.platform.domain.entity.h2;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

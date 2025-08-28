@@ -1,4 +1,4 @@
-package xyx.platform.domain.backup;
+package xyx.platform.domain.entity.mongo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,15 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Show")
-public class Show {
+@Document(collection = "Movie")
+public class Movie {
     @Id
     private String id;
-    private String city;
-    private String area;
-    private String theatre;
-    private String language;
-    private String genre;
-    private Movie movie;
-    private Audi audi;
+    private String name;
+    private String  showTimings;
+    private String  endDate;
+    private String  startDate;
 }

@@ -4,8 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import xyx.platform.domain.backup.Show;
-import xyx.platform.domain.backup.Shows;
+import xyx.platform.domain.entity.mongo.Show;
+import xyx.platform.domain.entity.mongo.Shows;
 import xyx.platform.services.PublisheHandler;
 
 import java.util.List;

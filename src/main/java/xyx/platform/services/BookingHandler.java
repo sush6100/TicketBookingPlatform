@@ -2,9 +2,9 @@ package xyx.platform.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyx.platform.domain.entity.BookingDetail;
-import xyx.platform.repository.BookingRepo;
-import xyx.platform.repository.TheatreRepo;
+import xyx.platform.domain.entity.h2.BookingDetail;
+import xyx.platform.repository.h2.BookingRepo;
+import xyx.platform.repository.h2.TheatreRepo;
 
 @Service
 public class BookingHandler {

@@ -1,4 +1,4 @@
-package xyx.platform.domain.backup;
+package xyx.platform.domain.entity.mongo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,14 +6,18 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Audi")
-public class Audi {
+@Document(collection = "Show")
+public class Show {
     @Id
     private String id;
-    private String name;
-    private List<Seat> seats;
+    private String city;
+    private String area;
+    private String theatre;
+    private String language;
+    private String genre;
+    private Movie movie;
+    private Audi audi;
 }

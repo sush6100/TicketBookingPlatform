@@ -1,4 +1,4 @@
-package xyx.platform.domain.backup;
+package xyx.platform.domain.entity.mongo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

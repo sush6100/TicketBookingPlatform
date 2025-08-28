@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyx.platform.domain.entity.BookingDetail;
+import xyx.platform.domain.entity.h2.BookingDetail;
 import xyx.platform.services.BookingHandler;
 
 @RestController
