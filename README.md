@@ -11,7 +11,7 @@ Data Model
 
 Overall Technical Flow
 -----------------------
-
+![img_8.png](img_8.png)
 
 Reference Architecture
 ----------------------
