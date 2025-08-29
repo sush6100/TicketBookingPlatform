@@ -1,4 +1,4 @@
-package xyx.platform;
+package xyx.platform.repository.mongo;
 
 import lombok.Getter;
 import org.springframework.context.annotation.Configuration;

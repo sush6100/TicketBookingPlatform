@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.stereotype.Service;
-import xyx.platform.MongoConfig;
+import xyx.platform.repository.mongo.MongoConfig;
 import xyx.platform.domain.entity.mongo.Movie;
 import xyx.platform.domain.entity.mongo.Seat;
 import xyx.platform.domain.entity.mongo.Show;

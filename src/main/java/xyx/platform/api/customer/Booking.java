@@ -17,7 +17,7 @@ public class Booking {
 
     @Autowired
     private BookingHandler bookingHandler;
-    @PostMapping(value = "/movie")
+    @PostMapping(value = "/ticket")
     public ResponseEntity<BookingDetail> movie(@RequestBody BookingDetail booking) {
 
         bookingHandler.book(booking);
