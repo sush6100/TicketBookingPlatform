@@ -11,7 +11,7 @@ Data Model
 
 Overall Technical Flow
 -----------------------
-<img width="892" height="494" alt="image" src="https://github.com/user-attachments/assets/34867ebf-d2a6-4880-a0ba-34bb5b5da0cb" />
+
 
 Reference Architecture
 ----------------------
