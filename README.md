@@ -1,3 +1,14 @@
+Data Model
+----------
+THEATRE	SHOW	MOVIE	AUDI	SEAT
+Name: "pvr"	City: "Chennai",	Name: "Jurassic Park Comedy”,	Name	SeatId: "1_1_Reclienir",
+City: "blr"	Area: "Annasalai",	ShowTimings: "12-15;16-19;20-23",	List<Seat>	Type: "Recliner",
+PayId: "https://www.payu.com/xyz"	Theatre: "PVR",	EndDate: "26-09-2025",		Rrow: "1",
+LockUrl: "https://www.xyz.com/lock"	Language: "English",	StartDate: "26-10-2025"		Col: "1"
+UnLockUrl: "https://www.xyz.com/unlock"	Genre: "Comedy",			
+PricingUrl: "https://www.xyz.com/pricing"	Movie			
+TheatreOfferPromoUrl: "https://www.xyz.com/promo"	Audi			
+
 Overall Technical Flow
 -----------------------
 <img width="892" height="494" alt="image" src="https://github.com/user-attachments/assets/34867ebf-d2a6-4880-a0ba-34bb5b5da0cb" />
