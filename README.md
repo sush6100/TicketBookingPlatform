@@ -1,13 +1,13 @@
 Data Model
 ----------
-THEATRE	SHOW	MOVIE	AUDI	SEAT
-Name: "pvr"	City: "Chennai",	Name: "Jurassic Park Comedy”,	Name	SeatId: "1_1_Reclienir",
-City: "blr"	Area: "Annasalai",	ShowTimings: "12-15;16-19;20-23",	List<Seat>	Type: "Recliner",
-PayId: "https://www.payu.com/xyz"	Theatre: "PVR",	EndDate: "26-09-2025",		Rrow: "1",
-LockUrl: "https://www.xyz.com/lock"	Language: "English",	StartDate: "26-10-2025"		Col: "1"
-UnLockUrl: "https://www.xyz.com/unlock"	Genre: "Comedy",			
-PricingUrl: "https://www.xyz.com/pricing"	Movie			
-TheatreOfferPromoUrl: "https://www.xyz.com/promo"	Audi			
+1) Relational:
+
+![img_1.png](img_1.png)  ![img_2.png](img_2.png)  ![img_3.png](img_3.png)
+
+2) No Sql:
+
+![img_4.png](img_4.png)  ![img_5.png](img_5.png)  ![img_6.png](img_6.png)  ![img_7.png](img_7.png)
+			
 
 Overall Technical Flow
 -----------------------
@@ -27,6 +27,7 @@ components wherever applicable
 
 Overall Deployment Architecture
 --------------------------------
-<img width="725" height="581" alt="image" src="https://github.com/user-attachments/assets/1baa5bb1-af13-48ad-ab78-642d53195449" />
+![img.png](img.png)
+
 
 

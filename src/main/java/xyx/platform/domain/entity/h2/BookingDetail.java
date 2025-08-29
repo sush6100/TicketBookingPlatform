@@ -6,8 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 @Data
 @NoArgsConstructor
@@ -19,7 +17,7 @@ public class BookingDetail {
     private String email;
     private String phone;
     private Integer theatreId;
-    private List<String> seatId;
+    private String bookedSeatIds;
     private String price;
     private String showDate;
     private String showTime;
