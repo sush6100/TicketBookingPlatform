@@ -83,8 +83,10 @@
   * Seat Releasing:
     * @GetMapping(value = "/release")
       public ResponseEntity<Boolean> releaseSeat(@RequestParam String theatre, @RequestParam String seat, @RequestParam String showTime)
+  * Offer Management:
+    * @GetMapping(value = "/apply_offer")
+    public ResponseEntity<Double> calculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon)
   * Ticket Cancellation: <<-To Be Done->>
-  * Offer Management: <<-To Be Done->>
 
 **Database Design**
 --------------------------
