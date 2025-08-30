@@ -11,6 +11,7 @@ import xyx.platform.domain.entity.mongo.Show;
 import xyx.platform.services.ShowsHandler;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/shows")
@@ -21,12 +22,13 @@ public class Shows {
     private ShowsHandler showsHandler;
 
     @GetMapping(value = "/movie_list")
-    public ResponseEntity<List<Show>> movieList(@RequestParam String city) {
+    public ResponseEntity<List<Show>> movieList(@RequestParam Map<String, String> params) {
 
 
         log.info("The temperature date details: {}", "seatHandler");
 
-        return ResponseEntity.ok(showsHandler.getMovieList(city));
+        return ResponseEntity.ok(showsHandler.getMovieList(params));
+        //return ResponseEntity.ok(showsHandler.getMovieList(params.get("city")));
     }
 
     @GetMapping(value = "/movie_detail")

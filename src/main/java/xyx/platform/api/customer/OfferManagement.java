@@ -15,10 +15,8 @@ import java.util.List;
 @RequestMapping(value = "/manage_offer")
 @Slf4j
 public class OfferManagement {
-
     @Autowired
     private OfferHandler offerHandler;
-
     @GetMapping(value = "/apply_offer")
     public ResponseEntity<Double> calculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon) {
 

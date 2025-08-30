@@ -22,7 +22,7 @@ public class Booking {
 
         bookingHandler.book(booking);
 
-        log.info("Booking details: Seat: {}", booking.getSeatId());
+        log.info("Booking details: Seat: {}", booking.getBookedSeatIds());
 
         return ResponseEntity.ok(new BookingDetail());
     }
