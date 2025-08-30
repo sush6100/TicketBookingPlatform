@@ -10,7 +10,7 @@
 * To be done in a continuous manner as monitor baseline requirements and Identify changed requirement; remove, add, modify, and re-assess priorities
 * The description below is closely related to Business, Information & System and Technical Architectures
 
-**Functional Flows:**
+**Major Functional Flows:**
 -----------------
 -----------------
 * Onboard Theatre:
@@ -56,7 +56,7 @@
 
 ![img_17.png](readme/img_17.png)
 
-**API Specifications**
+**Major API Specifications**
 ----------------------
 ----------------------
 * Major APIs:-
@@ -71,7 +71,10 @@
       public ResponseEntity<BookingDetail> movie(@RequestBody BookingDetail booking)
 
 * Other APIs:-
-  * <<-To Be Done->>
+  * Seat Locking: <<-To Be Done->>
+  * Seat Releasing: <<-To Be Done->>
+  * Ticket Cancellation: <<-To Be Done->>
+  * Offer Management: <<-To Be Done->>
 
 **Database Design**
 --------------------------
