@@ -25,10 +25,10 @@
 
 ![img_10.png](readme/img_10.png)
 
-* Ticket Cancellation:
-  <<-To Be Done->>
-* Offer Management:
-<<-To Be Done->>
+* Seat Locking: <<-To Be Done->>
+* Seat Releasing: <<-To Be Done->>
+* Ticket Cancellation: <<-To Be Done->>
+* Offer Management: <<-To Be Done->>
 
 **Data Model**
 ----------
