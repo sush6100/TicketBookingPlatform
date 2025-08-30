@@ -147,6 +147,7 @@ fallback after all retry options are exhausted.
 longer time to execute. Based on notification further actions including closing the execution etc. will be
 made. The monitoring can be done using tools like App Dynamics or Controller_Advices etc.
 * **Extensibility, Agility & Usability:** Follow 12-Factor-Application principles Aiming to make application easy to configure, deploy, extend and enhance by making it loosely coupled
+* **Observation and Logging:** Perform secure application logging to monitor issues. Use Monitoring tools like ELK, Cloud tools etc. Also use performance monitoring tools like APM, AppDynamics etc to monitor performance at runtime.
 
 High Level Availability Details
 -------------------------------
