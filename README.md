@@ -41,7 +41,7 @@
 
 ![img_4.png](readme/img_4.png)  ![img_5.png](readme/img_5.png)  ![img_6.png](readme/img_6.png)  ![img_7.png](readme/img_7.png)
 
-**Approximate Data Flow**
+**Major Data Flow**
 ---------------------
 ---------------------
 * Theatre Onboarding
@@ -121,7 +121,7 @@ Reference Architecture
 ----------------------
 * The following is the basic reference architecture that has been used to come up with the System Architecture of the given problem statement.
 <img width="973" height="442" alt="image" src="https://github.com/user-attachments/assets/6364f21c-f198-488b-b85e-2dbb319a4e42" />
-    * Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns
+                      * [Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns]
 
 * The following is the generic reference architecture that will be used to design the internal
 components wherever applicable
