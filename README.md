@@ -1,5 +1,6 @@
 Functional Flows:
 -----------------
+-----------------
 * Onboard Theatre:
 
 ![img_11.png](img_11.png)
@@ -12,7 +13,13 @@ Functional Flows:
 
 ![img_10.png](img_10.png)
 
+* Ticket Cancellation:
+  <<-To Be Done->>
+* Offer Management:
+<<-To Be Done->>
+
 Data Model
+----------
 ----------
 * RELATIONAL:
 
@@ -36,10 +43,9 @@ Data Model
 **Architectural Overview**
 --------------------------
 --------------------------
-
 Technology Stack
 ----------------
-* Architecture: [Microservices [CQRS], Facade, Adapter etc.]
+* Architecture: [Microservices [CQRS/SAGA], Facade, Adapter etc.]
 * Resilience: [Hystrix, Retry etc.]
 * Build and Orchestration: [Docker, K8S, Cloud Pipelines (eg. Azure Pipeline)]
 * Cloud [Azure or AWS]
@@ -56,8 +62,7 @@ Reference Architecture
 ----------------------
 * The following is the basic reference architecture that has been used to come up with the System Architecture of the given problem statement.
 <img width="973" height="442" alt="image" src="https://github.com/user-attachments/assets/6364f21c-f198-488b-b85e-2dbb319a4e42" />
--Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns
-
+  * Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns
 
 * The following is the generic reference architecture that will be used to design the internal
 components wherever applicable
@@ -102,12 +107,12 @@ on configuration
   * Resilience to be handled by Hystrix and Retry.
   * Retry for a bounded time
   * Fallback after retry exhausted
-  * Long-running tasks to be monitored and purged after the cutoﬀ time. This to be retried at any later schedule.
+  * Long-running tasks to be monitored and purged after the cut-oﬀ time. This to be retried at any later schedule.
 
 Storage Details
 ---------------
 * Storage for CICD build and deploy.
 * Storage for Database, Messaging Infrastructure
-* Storage for Schedule Instance Repository
+* Storage for API Instances Repository
 
 
