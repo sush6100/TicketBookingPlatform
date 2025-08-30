@@ -15,15 +15,15 @@
 -----------------
 * Onboard Theatre:
 
-![img_11.png](img_11.png)
+![img_11.png](readme/img_11.png)
 
 * Onboard Show:
 
-![img_9.png](img_9.png)
+![img_9.png](readme/img_9.png)
 
 * Ticket Booking:
 
-![img_10.png](img_10.png)
+![img_10.png](readme/img_10.png)
 
 * Ticket Cancellation:
   <<-To Be Done->>
@@ -35,26 +35,26 @@
 ----------
 * Relational:
 
-![img_1.png](img_1.png)  ![img_2.png](img_2.png)  ![img_3.png](img_3.png)
+![img_1.png](readme/img_1.png)  ![img_2.png](readme/img_2.png)  ![img_3.png](readme/img_3.png)
 
 * No-Sql:
 
-![img_4.png](img_4.png)  ![img_5.png](img_5.png)  ![img_6.png](img_6.png)  ![img_7.png](img_7.png)
+![img_4.png](readme/img_4.png)  ![img_5.png](readme/img_5.png)  ![img_6.png](readme/img_6.png)  ![img_7.png](readme/img_7.png)
 
 **Approximate Data Flow**
 ---------------------
 ---------------------
 * Theatre Onboarding
 
-![img_15.png](img_15.png)
+![img_15.png](readme/img_15.png)
 
 * Movie Publishing
 
-![img_16.png](img_16.png)
+![img_16.png](readme/img_16.png)
 
 * Ticket Booking
 
-![img_17.png](img_17.png)
+![img_17.png](readme/img_17.png)
 
 **API Specifications**
 ----------------------
@@ -100,7 +100,7 @@ Technology Stack
 
 Logical Architecture
 ---------------------
-![img_8.png](img_8.png)
+![img_8.png](readme/img_8.png)
 
 Reference Architecture
 ----------------------
@@ -115,18 +115,18 @@ components wherever applicable
 
 Overall Deployment Architecture
 --------------------------------
-![img.png](img.png)
+![img.png](readme/img.png)
 
 Disaster Recovery Architecture:
 -------------------------------
 Normal
-![img_12.png](img_12.png)
+![img_12.png](readme/img_12.png)
 
 App Server Down:
-![img_13.png](img_13.png)
+![img_13.png](readme/img_13.png)
 
 DB Server Down:
-![img_14.png](img_14.png)
+![img_14.png](readme/img_14.png)
 
 **Key NFR Overview**
 ----------------
