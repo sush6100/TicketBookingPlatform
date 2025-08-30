@@ -16,18 +16,18 @@ public class HandleSeats {
     @Autowired
     private SeatHandler seatHandler;
 
+    @GetMapping(value = "/all_seats")
+    public ResponseEntity<Map<String, String>> allSeats(@RequestParam String theatre, @RequestParam String audi, @RequestParam String show) {
+
+        Map<String, String> allSeats = seatHandler.getAllSeats(theatre, audi, show);
+        log.info("Lock details: {} for show: {}", allSeats, show);
+
+        return ResponseEntity.ok(allSeats);
+    }
     @GetMapping(value = "/lock_status")
     public ResponseEntity<Map<String, String>> lockStatus(@RequestParam String theatre, @RequestParam String audi, @RequestParam String show) {
 
         Map<String, String> lockStatus = seatHandler.lockStatus(theatre, audi, show);
-        log.info("Lock details: {} for show: {}", lockStatus, show);
-
-        return ResponseEntity.ok(lockStatus);
-    }
-    @GetMapping(value = "/all_seats")
-    public ResponseEntity<Map<String, String>> allSeats(@RequestParam String theatre, @RequestParam String audi, @RequestParam String show) {
-
-        Map<String, String> lockStatus = seatHandler.getAllSeats(theatre, audi, show);
         log.info("Lock details: {} for show: {}", lockStatus, show);
 
         return ResponseEntity.ok(lockStatus);

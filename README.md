@@ -60,19 +60,29 @@
 ----------------------
 ----------------------
 * Major APIs:-
-  * Theatre Onboarding
+  * Theatre Onboarding:
     * @PostMapping(value = "/theatre")
       public ResponseEntity<TheatreDto> theatre(@RequestBody TheatreDto theatreDto)
-  * Movie Publishing
+  * Movie Publishing:
     * @PostMapping(value = "/movie")
       public ResponseEntity<List<Show>> publishMovie(@RequestBody Shows shows)
-  * Ticket Booking
+  * Ticket Booking:
     * @PostMapping(value = "/ticket")
       public ResponseEntity<BookingDetail> movie(@RequestBody BookingDetail booking)
+  * Get All Seats for display:
+    * @GetMapping(value = "/all_seats")
+      public ResponseEntity<Map<String, String>> allSeats(@RequestParam String theatre, @RequestParam String audi, @RequestParam String show)
 
 * Other APIs:-
-  * Seat Locking: <<-To Be Done->>
-  * Seat Releasing: <<-To Be Done->>
+  * Lock Status:
+    * @GetMapping(value = "/lock_status")
+      public ResponseEntity<Map<String, String>> lockStatus(@RequestParam String theatre, @RequestParam String audi, @RequestParam String show)
+  * Lock Seat:
+    * @PostMapping(value = "/lock")
+      public ResponseEntity<Boolean> reserveSeat(@RequestParam String theatre, @RequestParam String seatId, @RequestParam String showDate, @RequestParam String showTime)
+  * Seat Releasing:
+    * @GetMapping(value = "/release")
+      public ResponseEntity<Boolean> releaseSeat(@RequestParam String theatre, @RequestParam String seat, @RequestParam String showTime)
   * Ticket Cancellation: <<-To Be Done->>
   * Offer Management: <<-To Be Done->>
 
