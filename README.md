@@ -106,7 +106,7 @@ Reference Architecture
 ----------------------
 * The following is the basic reference architecture that has been used to come up with the System Architecture of the given problem statement.
 <img width="973" height="442" alt="image" src="https://github.com/user-attachments/assets/6364f21c-f198-488b-b85e-2dbb319a4e42" />
-  * Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns
+    * Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns
 
 * The following is the generic reference architecture that will be used to design the internal
 components wherever applicable
@@ -131,17 +131,19 @@ DB Server Down:
 **Key NFR Overview**
 ----------------
 ----------------
-* Scalability: Horizontal Scaling looks to be a feasible solution for scalability. Auto-scaling feature of the
+* **Scalability:** Horizontal Scaling looks to be a feasible solution for scalability. Auto-scaling feature of the
 cloud provider to generate or purge Scheduler instances based on demand.
-* Availability: A highly scalable system is highly available. When a node or instance is down, the requests
+* **Availability:** A highly scalable system is highly available. When a node or instance is down, the requests
 will be automatically routed to the next available instance or node. This facility will be configured with
 Kubernetes and Cloud Provider.
-* Durability and Resilience: Task execution to be tracked and degraded gracefully by appropriate
+* **Performance:** Try to go for a Reactive approach to promote non-blocking calls and making the system more concurrent
+* **Durability and Resilience:** Task execution to be tracked and degraded gracefully by appropriate
 monitoring and retrying with appropriate state. Retry to happen with help of Hystrix and there would be a
 fallback after all retry options are exhausted.
-* Bounded wait Time: Monitor the performance of the task execution and notify when any task takes
+* **Bounded wait Time:** Monitor the performance of the task execution and notify when any task takes
 longer time to execute. Based on notification further actions including closing the execution etc. will be
 made. The monitoring can be done using tools like App Dynamics or Controller_Advices etc.
+* **Extensibility, Agility & Usability:** Follow 12-Factor-Application principles Aiming to make application easy to configure, deploy, extend and enhance by making it loosely coupled
 
 High Level Availability Details
 -------------------------------
