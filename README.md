@@ -1,4 +1,16 @@
-Functional Flows:
+**Assumptions:**
+------------
+------------
+* Architecture Framework used: TOGAF
+* Architecture Vision has been developed
+* Stakeholders have been Identified.
+* Statement of Architecture Work has been created, and business context is validated.
+* Architecture Principles and business principles are confirmed and elaborated
+* TOGAF library including standard terminology, reusable components etc. are in place
+* To be done in a continuous manner: monitor baseline requirements and Identify changed requirement; remove, add, modify, and re-assess priorities
+* The description below is closely related to Business, Information & System and Technical Architectures
+
+**Functional Flows:**
 -----------------
 -----------------
 * Onboard Theatre:
@@ -18,16 +30,48 @@ Functional Flows:
 * Offer Management:
 <<-To Be Done->>
 
-Data Model
+**Data Model**
 ----------
 ----------
-* RELATIONAL:
+* Relational:
 
 ![img_1.png](img_1.png)  ![img_2.png](img_2.png)  ![img_3.png](img_3.png)
 
-* NO SQL:
+* No-Sql:
 
 ![img_4.png](img_4.png)  ![img_5.png](img_5.png)  ![img_6.png](img_6.png)  ![img_7.png](img_7.png)
+
+**Approximate Data Flow**
+---------------------
+---------------------
+* Theatre Onboarding
+
+![img_15.png](img_15.png)
+
+* Movie Publishing
+
+![img_16.png](img_16.png)
+
+* Ticket Booking
+
+![img_17.png](img_17.png)
+
+**API Specifications**
+----------------------
+----------------------
+* Major APIs:-
+  * Theatre Onboarding
+    * @PostMapping(value = "/theatre")
+      public ResponseEntity<TheatreDto> theatre(@RequestBody TheatreDto theatreDto)
+  * Movie Publishing
+    * @PostMapping(value = "/movie")
+      public ResponseEntity<List<Show>> publishMovie(@RequestBody Shows shows)
+  * Ticket Booking
+    * @PostMapping(value = "/ticket")
+      public ResponseEntity<BookingDetail> movie(@RequestBody BookingDetail booking)
+
+* Other APIs:-
+  * <<-To Be Done->>
 
 **Database Design**
 --------------------------
@@ -84,7 +128,7 @@ App Server Down:
 DB Server Down:
 ![img_14.png](img_14.png)
 
-Key NFR Overview
+**Key NFR Overview**
 ----------------
 ----------------
 * Scalability: Horizontal Scaling looks to be a feasible solution for scalability. Auto-scaling feature of the
@@ -101,18 +145,25 @@ made. The monitoring can be done using tools like App Dynamics or Controller_Adv
 
 High Level Availability Details
 -------------------------------
-* Overall Availability:
-  * Cloud provided K8S services will be responsible routing to the next available instance based
-on configuration
+  * Cloud provided K8S services will be responsible routing to the next available instance based on Auto-Scaling configuration
   * Resilience to be handled by Hystrix and Retry.
   * Retry for a bounded time
   * Fallback after retry exhausted
   * Long-running tasks to be monitored and purged after the cut-oﬀ time. This to be retried at any later schedule.
 
-Storage Details
----------------
-* Storage for CICD build and deploy.
-* Storage for Database, Messaging Infrastructure
-* Storage for API Instances Repository
+High Level Security Details
+-------------------------------
+  * Follow OWASP-10 principles including the below.
+  * Use JSYPT to encrypt the Passwords in property files.
+  * Use encryption or decryption wherever applicable.
+  * Use Key Vault or wallets like Oracle Wallets to securely store passwords.
+  * Use OAuth to secure Service to Service communications.
+  * Use 2 Factor Authentication whenever interacting with Customers including Theatres or Ticket buyers.
+
+High level Storage Details
+--------------------------
+  * Storage for CICD build and deploy.
+  * Storage for Database, Messaging Infrastructure
+  * Storage for API Instances Repository
 
 
