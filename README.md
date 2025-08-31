@@ -158,11 +158,11 @@ DB Server Down:
 ----------------
 ----------------
 * **Scalability:** Horizontal Scaling looks to be a feasible solution for scalability. Auto-scaling feature of the
-cloud provider to generate or purge Scheduler instances based on demand.
+cloud provider like AKS etc. to generate or purge API instances based on demand.
 * **Availability:** A highly scalable system is highly available. When a node or instance is down, the requests
-will be automatically routed to the next available instance or node. This facility will be configured with
+will automatically be routed to the next available instance or node. This facility will be configured with
 Kubernetes and Cloud Provider.
-* **Performance:** Try to go for a Reactive approach to promote non-blocking calls and making the system more concurrent
+* **Performance:** Try to go for a Reactive approach to promote non-blocking calls and making the system more concurrent.
 * **Durability and Resilience:** Task execution to be tracked and degraded gracefully by appropriate
 monitoring and retrying with appropriate state. Retry to happen with help of Hystrix and there would be a
 fallback after all retry options are exhausted.
@@ -174,19 +174,19 @@ made. The monitoring can be done using tools like App Dynamics or Controller_Adv
 
 High Level Availability Details
 -------------------------------
-  * Cloud provided K8S services will be responsible routing to the next available instance based on Auto-Scaling configuration
+  * Cloud provided K8S services will be responsible for routing to the next available instance based on Auto-Scaling configuration.
   * Resilience to be handled by Hystrix and Retry.
-  * Retry for a bounded time
-  * Fallback after retry exhausted
+  * Retry for a bounded time.
+  * Fallback after retry exhausted.
   * Long-running tasks to be monitored and purged after the cut-oﬀ time. This to be retried at any later schedule.
 
 High Level Scaling Details
 ---------------------------
-  * Cloud manages Scheduler Instance Availability
-  * Cloud manages the availability of topics
-  * Making use of Cloud Auto Scaling facilities
+  * Cloud manages all API Instance Availability.
+  * Cloud manages the availability of topics.
+  * Making use of Cloud Auto Scaling facilities.
   * The load will not be high all the time.
-  * When the load increases on occasional times, the Autoscaling facility of the cloud will automatically provision new instances of scheduler based on the auto-scaling configuration
+  * When the load increases on occasional times, the Autoscaling facility of the cloud will automatically provision new instances of scheduler based on the auto-scaling configuration.
   * When the load decreases, the unused instances will be purged.
 
 High Level Security Details
