@@ -161,7 +161,7 @@ DB Server Down:
 cloud provider like AKS etc. to generate or purge API instances based on demand.
 * **Availability:** A highly scalable system is highly available. When a node or instance is down, the requests
 will automatically be routed to the next available instance or node. This facility will be configured with
-Kubernetes and Cloud Provider.
+Kubernetes and Cloud Provider. We may plan to use caching for e.g. REDIS; for the GET APIs so to avoid database round trips.
 * **Performance:** Try to go for a Reactive approach to promote non-blocking calls and making the system more concurrent.
 * **Durability and Resilience:** Task execution to be tracked and degraded gracefully by appropriate
 monitoring and retrying with appropriate state. Retry to happen with help of Hystrix and there would be a
@@ -226,6 +226,8 @@ Approximate Storage Estimations
   * Each Running Task: 10-20 mb
   * Data Handled by each Running API Instance: 150 kb
   * Average Size of each row in a table: 20 kb
+  * Expected number of concurrent booking request received at peak time: 1 lac
+  * Expected number of instances required to be available at peak time: 800 to 1000.
 
 
 
