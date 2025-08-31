@@ -135,8 +135,11 @@ Reference Architecture
 components wherever applicable
 <img width="562" height="283" alt="image" src="https://github.com/user-attachments/assets/917dbad6-2c9d-42b8-8083-1816ef6ab9b0" />
 
+Detailed System Architecture
+------------------------------
+![img.png](readme/img_22.png)
 
-Overall Deployment Architecture
+Overall Build and Deployment Architecture
 --------------------------------
 ![img.png](readme/img.png)
 
