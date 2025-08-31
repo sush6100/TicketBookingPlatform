@@ -25,6 +25,5 @@ public class Theatre {
     private String lockUrl;
     private String unLockUrl;
     private String pricingUrl;
-    private String theatreOfferPromoUrl;
 
 }

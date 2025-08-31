@@ -25,21 +25,28 @@
 
 ![img_10.png](readme/img_10.png)
 
+* Offer Management (Validation):
+
+![img.png](readme/img_20.png)
+
+* Offer Management (Apply Coupon):
+
+![img_1.png](readme/img_21.png)
+
 * Seat Locking: <<-To Be Done->>
 * Seat Releasing: <<-To Be Done->>
 * Ticket Cancellation: <<-To Be Done->>
-* Offer Management: <<-To Be Done->>
 
 **Data Model**
 ----------
 ----------
 * Relational:
 
-![img_1.png](readme/img_1.png)  ![img.png](readme/img_18.png)  ![img_3.png](readme/img_3.png)
+![img.png](readme/img_1.png)  ![img.png](readme/img_18.png)  ![img_3.png](readme/img_3.png)
 
 * No-Sql:
 
-![img_4.png](readme/img_4.png)  ![img_5.png](readme/img_5.png)  ![img_6.png](readme/img_6.png)  ![img_7.png](readme/img_7.png)
+![img_4.png](readme/img_4.png)  ![img_5.png](readme/img_5.png)  ![img_6.png](readme/img_6.png)  ![img_7.png](readme/img_7.png)  ![img.png](readme/img_19.png)
 
 **Major Data Flow**
 ---------------------
@@ -84,8 +91,10 @@
     * @GetMapping(value = "/release")
       public ResponseEntity<Boolean> releaseSeat(@RequestParam String theatre, @RequestParam String seat, @RequestParam String showTime)
   * Offer Management:
+    * @GetMapping(value = "/validate_coupon")
+      public ResponseEntity<String> validateCoupon(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon)
     * @GetMapping(value = "/apply_offer")
-    public ResponseEntity<Double> calculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon)
+      public ResponseEntity<Double> calculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon, @RequestParam Double price)
   * Ticket Cancellation: <<-To Be Done->>
 
 **Database Design**
@@ -120,8 +129,7 @@ Logical Architecture
 Reference Architecture
 ----------------------
 * The following is the basic reference architecture that has been used to come up with the System Architecture of the given problem statement.
-<img width="973" height="442" alt="image" src="https://github.com/user-attachments/assets/6364f21c-f198-488b-b85e-2dbb319a4e42" />
-                      * [Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns]
+<img width="973" height="442" alt="image" src="https://github.com/user-attachments/assets/6364f21c-f198-488b-b85e-2dbb319a4e42" /> [Reference: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns]
 
 * The following is the generic reference architecture that will be used to design the internal
 components wherever applicable
@@ -169,6 +177,15 @@ High Level Availability Details
   * Fallback after retry exhausted
   * Long-running tasks to be monitored and purged after the cut-oﬀ time. This to be retried at any later schedule.
 
+High Level Scaling Details
+---------------------------
+  * Cloud manages Scheduler Instance Availability
+  * Cloud manages the availability of topics
+  * Making use of Cloud Auto Scaling facilities
+  * The load will not be high all the time.
+  * When the load increases on occasional times, the Autoscaling facility of the cloud will automatically provision new instances of scheduler based on the auto-scaling configuration
+  * When the load decreases, the unused instances will be purged.
+
 High Level Security Details
 -------------------------------
   * Follow OWASP-10 principles including the below.
@@ -176,12 +193,36 @@ High Level Security Details
   * Use encryption or decryption wherever applicable.
   * Use Key Vault or wallets like Oracle Wallets to securely store passwords.
   * Use OAuth to secure Service to Service communications.
-  * Use 2 Factor Authentication whenever interacting with Customers including Theatres or Ticket buyers.
+  * Use 2-Factor Authentication whenever interacting with Customers including Theatres or Ticket buyers.
 
 High level Storage Details
 --------------------------
   * Storage for CICD build and deploy.
   * Storage for Database, Messaging Infrastructure
-  * Storage for API Instances Repository
+  * Storage for Running APIs
+  * Storage for Application Logs
+
+Approximate Storage Estimations
+-------------------------------
+* Approximate Request Load
+ 
+| API              | Size of 1 Request |
+|------------------|-------------------|
+| Theatre Onboard  | 4 - 8 kb          |
+| Movie Publish    | 20 - 30 kb        |
+| Offer Push       | 4 - 8 kb          |
+| Booking          | 10 - 15 kb        |
+| Handle Seat      | 4 - 5 kb          |
+| Offer Management | 4 - 5 kb          |
+| Pricing          | 4 - 5 kb          |
+| Shows            | 20 - 30 kb        |
+
+* Approximate Runtime Load
+  * Each Platform instance: 300-400 mb
+  * Each Schedule-Future Object: 30-70 mb
+  * Each Running Task: 10-20 mb
+  * Data Handled by each Running API Instance: 150 kb
+  * Average Size of each row in a table: 20 kb
+
 
 

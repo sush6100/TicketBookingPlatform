@@ -6,5 +6,4 @@ import xyx.platform.domain.entity.h2.Theatre;
 @Repository
 public interface TheatreRepo extends JpaRepository<Theatre, String> {
     String findPayIdById(Integer id);
-    String findTheatreOfferPromoUrlById(Integer id);
 }

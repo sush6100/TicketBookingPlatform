@@ -15,7 +15,7 @@ public class BookingHandler {
     private TheatreRepo theatreRepo;
 
     public void book(BookingDetail booking) {
-        //call payment api and get payment ref
+        //call payU payment api and get payment ref after payment is successful.
         String payId = theatreRepo.findPayIdById(booking.getTheatreId());
         String payRef = payUsingPayid(payId);
         booking.setPayRef(payRef);

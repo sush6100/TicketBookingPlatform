@@ -17,13 +17,22 @@ import java.util.List;
 public class OfferManagement {
     @Autowired
     private OfferHandler offerHandler;
-    @GetMapping(value = "/apply_offer")
-    public ResponseEntity<Double> calculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon) {
+    @GetMapping(value = "/apply_coupon")
+    public ResponseEntity<Double> applyCouponAndCalculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon, @RequestParam Double price) {
 
-        offerHandler.getOfferPrice(theatreId, seatIds, showTime, coupon);
+        final Double priceAfterOffer = offerHandler.applyCouponAndGetDiscount(theatreId, seatIds, showTime, coupon, price);
 
-        log.info("The temperature date details: {}", "seatHandler");
+        log.info("Offer Price: {}", priceAfterOffer);
 
-        return ResponseEntity.ok(0.0);
+        return ResponseEntity.ok(priceAfterOffer);
+    }
+    @GetMapping(value = "/validate_coupon")
+    public ResponseEntity<String> validateCoupon(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon) {
+
+        String isValid = offerHandler.validateCoupon(theatreId, seatIds, showTime, coupon);
+
+        log.info("Is coupon {} valid: {}", coupon, isValid);
+
+        return ResponseEntity.ok(isValid);
     }
 }
