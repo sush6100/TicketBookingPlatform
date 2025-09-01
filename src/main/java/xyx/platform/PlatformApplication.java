@@ -1,5 +1,6 @@
 package xyx.platform;
 
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import xyx.platform.resilience.Fallback;
 import org.jasypt.encryption.StringEncryptor;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @SpringBootApplication
+@EnableTransactionManagement
 public class PlatformApplication {
 
 	@Autowired

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import xyx.platform.repository.mongo.MongoConfig;
 import xyx.platform.domain.entity.h2.SeatAvailability;
 import xyx.platform.domain.entity.mongo.Seat;
@@ -56,6 +57,7 @@ public class SeatHandler {
         return "";
     }
 
+    @Transactional
     @Retry(name = "fetchRetry", fallbackMethod = "fallback")
     public String lockSeat(String theatre, String seatId, String showDate, String showTime) {
 

@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import xyx.platform.domain.entity.mongo.Show;
 import xyx.platform.domain.entity.mongo.Shows;
-import xyx.platform.services.PublisheHandler;
+import xyx.platform.services.PublishHandler;
 
 import java.util.List;
 
@@ -16,12 +16,12 @@ import java.util.List;
 public class Publisher {
 
     @Autowired
-    private PublisheHandler publisheHandler;
+    private PublishHandler publishHandler;
 
     @PostMapping(value = "/movie")
     public ResponseEntity<List<Show>> publishMovie(@RequestBody Shows shows) {
 
-        final List<Show> retShows = publisheHandler.publish(shows.getShows());
+        final List<Show> retShows = publishHandler.publish(shows.getShows());
         log.info("The temperature date details: {}", retShows);
 
         return ResponseEntity.ok(retShows);
