@@ -16,13 +16,14 @@ public class BookingHandler {
     private TheatreRepo theatreRepo;
 
     @Transactional
-    public void book(BookingDetail booking) {
+    public BookingDetail book(BookingDetail booking) {
         //call payU payment api and get payment ref after payment is successful.
-        String payId = theatreRepo.findPayIdById(booking.getTheatreId());
-        String payRef = payUsingPayid(payId);
+        Object payId = theatreRepo.findPayDetailByTheatreId(booking.getTheatreId());
+        String payRef = payUsingPayid(payId.toString());
         booking.setPayRef(payRef);
-        bookingRepo.save(booking);
+        BookingDetail bookingDetail = bookingRepo.save(booking);
         //send notification bookingDetails.getEmail bookingDetails.getPhone
+        return bookingDetail;
     }
 
     private String payUsingPayid(String payId) {

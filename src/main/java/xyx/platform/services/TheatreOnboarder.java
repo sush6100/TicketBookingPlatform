@@ -18,11 +18,11 @@ public class TheatreOnboarder {
         theatre.setCity(theatreDto.getCity());
         theatre.setName(theatreDto.getName());
         theatre.setLockUrl(theatreDto.getLockUrl());
-        theatre.setPayId(theatreDto.getPayId());
+        theatre.setPayDetail(theatreDto.getPayId());
         theatre.setPricingUrl(theatreDto.getPricingUrl());
         theatre.setUnLockUrl(theatreDto.getUnLockUrl());
         theatreRepo.save(theatre);
-        theatreDto.setId(theatre.getId());
+        theatreDto.setId(theatre.getTheatreId());
         return theatreDto;
     }
 }

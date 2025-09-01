@@ -20,10 +20,8 @@ public class Booking {
     @PostMapping(value = "/ticket")
     public ResponseEntity<BookingDetail> movie(@RequestBody BookingDetail booking) {
 
-        bookingHandler.book(booking);
-
         log.info("Booking details: Seat: {}", booking.getBookedSeatIds());
 
-        return ResponseEntity.ok(new BookingDetail());
+        return ResponseEntity.ok(bookingHandler.book(booking));
     }
 }

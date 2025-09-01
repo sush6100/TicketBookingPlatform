@@ -18,10 +18,10 @@ public class Theatre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer theatreId;
     private String name;
     private String city;
-    private String payId;
+    private String payDetail;
     private String lockUrl;
     private String unLockUrl;
     private String pricingUrl;
