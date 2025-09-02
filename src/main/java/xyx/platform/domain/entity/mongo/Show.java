@@ -13,11 +13,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Show {
     @Id
     private String id;
-    private String city;
-    private String area;
-    private String theatre;
     private String language;
     private String genre;
     private Movie movie;
-    private Audi audi;
+    private String audi;
 }

@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.stereotype.Service;
-import xyx.platform.domain.entity.mongo.Show;
+import xyx.platform.domain.entity.mongo.Shows;
 import xyx.platform.repository.mongo.MongoConfig;
 import xyx.platform.repository.mongo.MovieRepo;
+import xyx.platform.repository.mongo.ShowsRepo;
 
 import java.util.List;
 import java.util.Map;
@@ -19,19 +20,22 @@ public class ShowsHandler {
     @Autowired
     private MovieRepo movieRepo;
     @Autowired
+    private ShowsRepo showsRepo;
+    @Autowired
     private MongoConfig mongoConfig;
 
     @Value("${search.theatre}")
     private String searchTheatreQuery;
 
     @Retry(name = "fetchRetry", fallbackMethod = "fallback")
-    public List<Show> getMovieList(Map<String, String> prm) {
+    public List<Shows> getMovieList(Map<String, String> prm) {
 
         final BasicQuery basicQuery = new BasicQuery(String.format(searchTheatreQuery, prm.get("movie"), prm.get("city"), prm.get("time")));
-        final List<Show> result = mongoConfig.getMongoTemplate().find(basicQuery, Show.class);
+//        final List<Show> result = mongoConfig.getMongoTemplate().find(basicQuery, Show.class);
+        final List<Shows> shows = mongoConfig.getMongoTemplate().find(basicQuery, Shows.class);
 
-        log.info("All Movies: {} in: {}", result, prm);
+        log.info("All Movies: {} in: {}", shows, prm);
 
-        return result;
+        return shows;
     }
 }

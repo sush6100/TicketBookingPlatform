@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import xyx.platform.domain.entity.mongo.Show;
+import xyx.platform.domain.entity.mongo.Shows;
 import xyx.platform.services.ShowsHandler;
 
 import java.util.List;
@@ -16,27 +16,17 @@ import java.util.Map;
 @RestController
 @RequestMapping(value = "/shows")
 @Slf4j
-public class Shows {
+public class ShowsGetter {
 
     @Autowired
     private ShowsHandler showsHandler;
 
     @GetMapping(value = "/movie_list")
-    public ResponseEntity<List<Show>> movieList(@RequestParam Map<String, String> params) {
+    public ResponseEntity<List<Shows>> movieList(@RequestParam Map<String, String> params) {
 
 
         log.info("The temperature date details: {}", "seatHandler");
 
         return ResponseEntity.ok(showsHandler.getMovieList(params));
-        //return ResponseEntity.ok(showsHandler.getMovieList(params.get("city")));
-    }
-
-    @GetMapping(value = "/movie_detail")
-    public ResponseEntity<List<String>> movieDetail(@RequestParam String location, @RequestParam Integer dayRange) {
-
-//        final List<TemperatureDate> temperatureDates = reportReaderService.readReportWithDayRange(location, dayRange);
-//        log.info("The temperature date details: {}", temperatureDates);
-
-        return ResponseEntity.ok(null);
     }
 }

@@ -85,7 +85,7 @@ public class SeatHandler {
         List<Show> result = mongoTemplate.find(basicQuery, Show.class);
 
 
-        return result.get(0).getAudi().getSeats();
+        return null ; //result.get(0).getAudi().getSeats();
     }
 
     @Retry(name = "fetchRetry", fallbackMethod = "fallback")
