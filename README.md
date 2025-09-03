@@ -222,12 +222,12 @@ Approximate Storage Estimations
 | Handle Seat      | 4 - 5 kb          |
 | Offer Management | 4 - 5 kb          |
 | Pricing          | 4 - 5 kb          |
-| Shows            | 20 - 30 kb        |
+| Shows            | 60 - 80 kb        |
 
 * Approximate Runtime Load
-  * Each Platform (Spring Boot) instance: 300-400 mb
-  * Each Flow at runtime average: 16 - 20 kb
-  * Average Size of each row in a table: 20 kb
+  * Each Platform (Spring Boot) instance: 200-300 mb
+  * Each Flow at runtime average: 20 - 25 kb
+  * Average Size of each row in a table: 20 - 25 kb
   * Expected number of concurrent booking request received at peak time: 1 lac
   * Expected number of instances of Platform APIs required to be available at peak time: 800 to 1000.
 
