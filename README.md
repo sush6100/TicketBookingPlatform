@@ -46,7 +46,11 @@
 
 * No-Sql:
 
-![img_4.png](readme/img_4.png)  ![img_5.png](readme/img_5.png)  ![img_6.png](readme/img_6.png)  ![img_7.png](readme/img_7.png)  ![img.png](readme/img_19.png)
+![img.png](readme/img_4.png)  ![img.png](readme/img_5.png)  ![img.png](readme/img_6.png)
+
+![img.png](readme/img_23.png)  ![img.png](readme/img_24.png)  ![img.png](readme/img_25.png)
+
+![img.png](readme/img_19.png)
 
 **Major Data Flow**
 ---------------------
