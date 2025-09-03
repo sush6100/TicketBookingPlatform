@@ -225,10 +225,8 @@ Approximate Storage Estimations
 | Shows            | 20 - 30 kb        |
 
 * Approximate Runtime Load
-  * Each Platform instance: 300-400 mb
-  * Each Schedule-Future Object: 30-70 mb
-  * Each Running Task: 10-20 mb
-  * Data Handled by each Running API Instance: 150 kb
+  * Each Platform (Spring Boot) instance: 300-400 mb
+  * Each Flow at runtime average: 16 - 20 kb
   * Average Size of each row in a table: 20 kb
   * Expected number of concurrent booking request received at peak time: 1 lac
   * Expected number of instances of Platform APIs required to be available at peak time: 800 to 1000.
