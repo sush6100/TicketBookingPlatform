@@ -3,17 +3,17 @@ package xyx.platform.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import xyx.platform.domain.entity.mongo.Shows;
-import xyx.platform.repository.mongo.ShowsRepo;
+import xyx.platform.domain.entity.mongo.TheatreShows;
+import xyx.platform.repository.mongo.TheatreShowsRepo;
 
 @Service
 public class PublishHandler {
 
     @Autowired
-    private ShowsRepo showsRepo;
+    private TheatreShowsRepo theatreShowsRepo;
     @Transactional
-    public Shows publishShows(Shows shows) {
+    public TheatreShows publishShows(TheatreShows theatreShows) {
 
-        return showsRepo.save(shows);
+        return theatreShowsRepo.save(theatreShows);
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "Theatre")
-public class Shows {
+public class TheatreShows {
     @Id
     private String theatreId;
     private String area;

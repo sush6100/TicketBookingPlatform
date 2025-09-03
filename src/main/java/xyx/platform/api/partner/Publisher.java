@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyx.platform.domain.entity.mongo.Shows;
+import xyx.platform.domain.entity.mongo.TheatreShows;
 import xyx.platform.services.PublishHandler;
 
 @RestController
@@ -18,11 +18,11 @@ public class Publisher {
     @Autowired
     private PublishHandler publishHandler;
     @PostMapping(value = "/shows")
-    public ResponseEntity<Shows> publishShows(@RequestBody Shows shows) {
+    public ResponseEntity<TheatreShows> publishShows(@RequestBody TheatreShows theatreShows) {
 
-        final Shows retShows = publishHandler.publishShows(shows);
-        log.info("The temperature date details: {}", retShows);
+        final TheatreShows retTheatreShows = publishHandler.publishShows(theatreShows);
+        log.info("The temperature date details: {}", retTheatreShows);
 
-        return ResponseEntity.ok(retShows);
+        return ResponseEntity.ok(retTheatreShows);
     }
 }

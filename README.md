@@ -72,7 +72,7 @@
       public ResponseEntity<TheatreDto> theatre(@RequestBody TheatreDto theatreDto)
   * Movie Publishing:
     * @PostMapping(value = "/movie")
-      public ResponseEntity<List<Show>> publishMovie(@RequestBody Shows shows)
+      public ResponseEntity<List<Show>> publishMovie(@RequestBody Shows theatreShows)
   * Ticket Booking:
     * @PostMapping(value = "/ticket")
       public ResponseEntity<BookingDetail> movie(@RequestBody BookingDetail booking)

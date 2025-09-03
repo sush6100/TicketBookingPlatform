@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import xyx.platform.domain.entity.mongo.Shows;
+import xyx.platform.domain.entity.mongo.TheatreShows;
 import xyx.platform.services.ShowsHandler;
 
 import java.util.List;
@@ -22,8 +22,7 @@ public class ShowsGetter {
     private ShowsHandler showsHandler;
 
     @GetMapping(value = "/movie_list")
-    public ResponseEntity<List<Shows>> movieList(@RequestParam Map<String, String> params) {
-
+    public ResponseEntity<List<TheatreShows>> movieList(@RequestParam Map<String, String> params) {
 
         log.info("The temperature date details: {}", "seatHandler");
 
