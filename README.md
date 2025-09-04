@@ -124,7 +124,7 @@ Technology Stack
 * Java 21, Spring [Boot, REST, Kafka, Data-JPA]
 * Azure Functions / AWS Lambda for implementing adhoc offers
 * Eventing and Messaging: [Kafka Topics]
-* Datastore: RDBMS, NOSQL [Redis etc.]
+* Datastore: RDBMS, NOSQL
 * Monitoring: [ELK/Splunk etc.]
 
 Logical Architecture
