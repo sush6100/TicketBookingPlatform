@@ -7,8 +7,7 @@
 * Statement of Architecture Work has been created, and business context is validated.
 * Architecture Principles and business principles are confirmed and elaborated
 * TOGAF library including standard terminology, reusable components etc. are in place
-* To be done in a continuous manner as monitor baseline requirements and Identify changed requirement; remove, add, modify, and re-assess priorities
-* The description below is closely related to Business, Information & System and Technical Architectures
+* This architecture work to be done in a itearative manner which includes monitor baseline requirements and Identify changed requirement; remove, add, modify, and re-assess priorities
 
 **Major Functional Flows:**
 -----------------
