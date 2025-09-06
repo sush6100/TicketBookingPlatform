@@ -122,11 +122,12 @@ Technology Stack
 * Resilience: [Hystrix, Retry etc.]
 * Build and Orchestration: [Docker, K8S, Cloud Pipelines (eg. Azure Pipeline)]
 * Cloud [Azure or AWS]
+* Java 21, Spring [Boot, REST, Kafka, Data-JPA]
 * ADHOC offers using Azure Functions / AWS Lambda
 * Java 8+, Spring [Boot, REST, Kafka, Data-JPA]
 * Eventing and Messaging: [Kafka Topics]
-* Datastore: Postgres, Schedule Repository [Redis etc.]
-* Monitoring: [ELK etc.]
+* Datastore: RDBMS, NOSQL
+* Monitoring: [ELK/Splunk etc.]
 
 Logical Architecture
 ---------------------
