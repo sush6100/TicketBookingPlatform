@@ -123,7 +123,6 @@ Technology Stack
 * Cloud [Azure or AWS]
 * Implementing ADHOC offers issued by Theatre and Platform using Azure Functions / AWS Lambda
 * Java 21, Spring [Boot, REST, Kafka, Data-JPA]
-* Java 8+, Spring [Boot, REST, Kafka, Data-JPA]
 * Eventing and Messaging: [Kafka Topics]
 * Datastore: RDBMS, NOSQL
 * Monitoring: [ELK/Splunk etc.]
