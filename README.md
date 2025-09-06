@@ -100,6 +100,7 @@
     * @GetMapping(value = "/apply_offer")
       public ResponseEntity<Double> calculateOffer(@RequestParam Integer theatreId, @RequestParam List<String> seatIds, @RequestParam String showTime, @RequestParam String coupon, @RequestParam Double price)
   * Ticket Cancellation: <<-To Be Done->>
+  * Scheduled Batch Processing for daily DB clean-ups after all shows are over: <<-To Be Done->>
 
 **Database Design**
 --------------------------
@@ -121,6 +122,7 @@ Technology Stack
 * Resilience: [Hystrix, Retry etc.]
 * Build and Orchestration: [Docker, K8S, Cloud Pipelines (eg. Azure Pipeline)]
 * Cloud [Azure or AWS]
+* ADHOC offers using Azure Functions / AWS Lambda
 * Java 8+, Spring [Boot, REST, Kafka, Data-JPA]
 * Eventing and Messaging: [Kafka Topics]
 * Datastore: Postgres, Schedule Repository [Redis etc.]
